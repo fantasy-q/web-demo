@@ -6,29 +6,35 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Ruby Markup Generator</title>
   <script src="./js/rubygen.js"></script>
-  <!-- <link rel="stylesheet" href="./css/normalize.css"> -->
+  <script src="./js/style.js"></script>
+  <link rel="stylesheet" href="./css/normalize.css">
   <link rel="stylesheet" href="./css/rubygen.css">
 </head>
 
 <body>
   <header>
-    <h1></h1>
+    <h1>Ruby Markup Generator</h1>
   </header>
 
-  <main>
-    <section>
-      <textarea name="" id=""></textarea>
+  <main class="main">
+    <section class="section-textarea">
+      <p>Text</p>
+      <textarea name="" id="text"></textarea>
     </section>
-    <section>
-      <textarea name="" id=""></textarea>
+    <section class="section-textarea">
+      <p>Ruby</p>
+      <textarea name="" id="ruby"></textarea>
     </section>
-    <section>
-      <textarea name="" id=""></textarea>
+    <section class="section-textarea">
+      <p>Markup</p>
+      <textarea name="" id="markup" readonly></textarea>
     </section>
-    <section>
-      <textarea name="" id=""></textarea>
+    <section class="section-textarea">
+      <p>Demo</p>
+      <div class="textarea" id="demo"></div>
     </section>
   </main>
+
 </body>
 
 </html>

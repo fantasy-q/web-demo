@@ -1,16 +1,96 @@
 /* rubygen.css */
-main {
-  width: 90%;
-  padding: 1em;
+body {
+  background-color: pink;
+}
+
+main,
+header {
+  width: 60%;
+  min-width: 54rem;
+}
+
+/* header */
+header {
   margin: 0 auto;
-  outline: 2px solid #eee;
+  background-color: #8E3339;
+  border-bottom: 2px solid #fff;
+  margin-bottom: 1em;
+}
+
+header>h1 {
+  color: white;
+  padding: 0.5em 0.2em;
+  margin: 0;
+  text-align: center;
+  text-shadow: -0.1em 0.1em 0 rgba(0, 0, 0, 0.3);
+  font-family: 'Avenir Next', 'Segoe UI', arial, sans-serif;
+  font-weight: 900;
+}
+
+/* main */
+.main {
+  padding: 0em;
+  margin: 0 auto;
+  box-sizing: border-box;
+  background-color: orange;
+  /* outline: 2px solid #eee; */
+  /* Grid Layout */
   display: grid;
-  grid-template-rows: repeat(2, 1fr);
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, auto);
+  grid-template-columns: repeat(2, auto);
+  grid-gap: 1px;
+  /* justify-content: space-evenly; */
 
 }
 
+/* section */
 section {
+  padding: 0;
+  /* margin: .1em; */
+  text-align: center;
   background-color: #eee;
-  margin: 1em;
+}
+
+.section-textarea>p {
+  font-size: 1.5em;
+  background-color: #fff;
+  margin: 0 auto;
+  padding: 0;
+}
+
+/* textarea */
+textarea {
+  resize: none;
+  overflow-y: hidden;
+}
+
+textarea:focus {
+  outline: none;
+}
+
+.textarea {
+  display: inline-block;
+  background-color: #fff;
+  /* font-family: inherit;
+  font-size: 100%;
+  line-height: 1.15;
+  margin: 0; */
+}
+
+textarea,
+.textarea {
+  padding: 2px;
+}
+
+
+
+textarea,
+.textarea,
+.section-textarea>p {
+  box-sizing: border-box;
+  border: 1px solid black;
+}
+
+.section-textarea>p {
+  border-bottom: none;
 }
