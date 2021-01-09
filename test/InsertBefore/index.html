@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>InsertBefore</title>
+  <style>
+    ul {
+      background-color: #eee;
+    }
+
+  </style>
+</head>
+
+<body>
+  <input type="button" value="Insert" onclick=insertItem()>
+  <ul id="ul">
+    <li id="_id1">list1</li>
+    <li id="_id2">list2</li>
+    <li id="_id3">list3</li>
+    <li id="_id4">list4</li>
+    <li id="_id5">list5</li>
+    <li id="_id6">list6</li>
+    <li id="_id7">list7</li>
+    <li id="_id8">list8</li>
+    <li id="_id9">list9</li>
+    <li id="_id10">list10</li>
+  </ul>
+
+  <script>
+    var count = 0;
+    const ul = document.getElementById("ul");
+    const li3 = document.getElementById("_id3");
+    function insertItem() {
+      console.log("insert");
+      let li = document.createElement("li");
+      li.innerHTML = "new item";
+      ul.insertBefore(li, li3);
+
+    }
+  </script>
+
+</body>
+
+</html>

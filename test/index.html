@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>test</title>
+  <style>
+    #box {
+      width: 200px;
+      height: 200px;
+      background-color: red;
+      position: absolute;
+      top: 100px;
+      left: 100px;
+      transition: transform 2s;
+    }
+
+    #box:hover {
+      transform: rotate(180deg);
+    }
+
+  </style>
+</head>
+
+<body>
+  <div id="box" onclick="changeColor(this);return false;"></div>
+
+  <script>
+    let rgb = new Array(3);
+    function changeColor(element) {
+      randomColor();
+      // element.setAttribute('style', 'background-color:' +
+      //   'rgb(' + rgb[0] + ',' + rgb[1] + ',' + rgb[2] + ')');
+      /* 字符串输入格式化 */
+      element.setAttribute('style', `background-color: rgb(${rgb[0]},${rgb[1]},${rgb[2]})`);
+      /* https://stackoverflow.com/questions/610406/javascript-equivalent-to-printf-string-format */
+
+      // console.log(element);
+      // console.log('set', rgb);
+    }
+    function randomColor() {
+      for (let index = 0; index < rgb.length; index++) {
+        rgb[index] = Math.round(Math.random() * 255);
+      }
+      // console.log(rgb);
+    }
+
+  </script>
+</body>
+
+</html>

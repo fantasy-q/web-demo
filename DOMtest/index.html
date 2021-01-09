@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DOM test</title>
+  <style>
+    body {
+      background-color: #ccc;
+    }
+
+    div#box {
+      width: 200px;
+      height: 200px;
+      background-color: red;
+      /* text-align: center; */
+
+    }
+
+    div#box span {
+      width: 50px;
+      height: 50px;
+      display: inline-block;
+      font-size: large;
+      background-color: orange;
+      vertical-align: middle;
+      text-align: center;
+    }
+
+  </style>
+  <script>
+    window.onload = init;
+    function init() {
+      DOMTEST(window);
+      DOMTEST(window.document);
+      // console.log(window.document == document);
+      console.log('window.document === document is',
+        window.document === document);
+      /* HEAD */
+      DOMTEST(document.head);
+      DOMTEST(document.title);
+      DOMTEST(document.domain);
+      DOMTEST(document.URL);
+      DOMTEST(document.referrer);
+      console.log('document.URL === document.referrer is',
+        document.URL === document.referrer);
+      DOMTEST(document.cookie);
+      /* BODY */
+      // body 还没加载，所以是 null，放到 </body > 前或使用 window.onload
+      DOMTEST(document.body);
+      /* METHODS */
+      DOMTEST(document.getElementById("box"));
+      DOMTEST(document.getElementById("box").innerHTML);
+      DOMTEST(document.getElementById("box").outerHTML);
+
+
+
+
+      // document.getElementById("box").onclick = alert('sdfsdf');
+
+
+
+
+
+
+
+    }
+    function DOMTEST(parameter) {
+      console.log(parameter, '\n' + 'type is ' + typeof (parameter));
+    }
+  </script>
+</head>
+
+<body>
+  <header>
+    <h1>DOM test</h1>
+  </header>
+  <div id="box">
+    <span>Box1</span><span>Box2</span><span>Box3</span><span>Box4</span>
+    <span>Box5</span>
+    <span>Box6</span>
+    <span>Box7</span>
+    <span>Box8</span>
+  </div>
+</body>
+
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    canvas {
+      border: 1px solid;
+    }
+
+  </style>
+</head>
+
+<body>
+  <canvas id="canvas"></canvas>
+  <script>
+    window.onload = function () {
+      var canvas = document.getElementById('canvas');
+      canvas.height = 728;
+      canvas.width = 1024;
+      var context = canvas.getContext('2d');
+      context.fillStyle = 'red';
+      context.beginPath();
+      context.arc(800, 300, 30, 0, 2 * Math.PI, true);
+      context.closePath();
+      context.fill();
+      setInterval(function () {
+        run(context);
+      }, 50);
+    };
+    var speed = 0;
+    var startPoint = 800;
+    function run(cxt) {
+      speed = -7;
+      cxt.clearRect(0, 0, 1024, 728);
+      //cxt.top+=speed;    
+      startPoint += speed;
+      cxt.beginPath();
+      cxt.arc(100, startPoint, 30, 0, 2 * Math.PI, true);
+      cxt.closePath();
+      cxt.fill();
+      console.log(startPoint);
+      if (startPoint < 0) {
+        startPoint = 800;
+      }
+    }
+  </script>
+</body>
+
+</html>

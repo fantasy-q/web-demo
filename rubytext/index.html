@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ruby Markup Generator</title>
+  <link rel="stylesheet" href="./rubytext.css">
+  <script src="./js/data.js"></script>
+  <script src="./js/rubytext.js"></script>
+  <script src="./js/common.js"></script>
+</head>
+
+<body>
+  
+  <section id="mainSection">
+    <p>
+      <textarea name="text" id="baseArea" cols="50" rows="20"></textarea>
+      <textarea name="ruby" id="rubyArea" cols="50" rows="20"></textarea>
+    </p>
+
+    <p>
+      <textarea name="output" id="outputArea" rows="20" readonly></textarea>
+    </p>
+
+    <p class="right">
+      <input type="button" value="测试" id="testButton">
+      <input type="button" value="示例" id="exampleButton">
+      <input type="button" value="生成" id="generateBtn">
+    </p>
+  </section>
+
+</body>
+
+</html>

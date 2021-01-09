@@ -1,0 +1,46 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+</head>
+
+<body>
+  <!--multiple is set to allow multiple files to be selected-->
+
+  <input id="myfiles" multiple type="file">
+
+  <footer>
+    <a href="https://developer.mozilla.org/en-US/docs/Web/API/FileList">MDN - FileList</a>
+  </footer>
+
+</body>
+
+<script>
+  var htmls = {};
+  var pullfiles = function () {
+    // love the query selector
+    var fileInput = document.querySelector("#myfiles");
+    var files = fileInput.files;
+    // cache files.length
+    var fl = files.length;
+    var i = 0;
+
+    while (i < fl) {
+      // localize file var in the loop
+      var file = files[i];
+      filename = file.name;
+      // console.log(filename);
+      // console.log(filename.slice(3, 5));
+      htmls[filename.slice(3, 5)] = { "filename": filename, "description": '' };
+      i++;
+    }
+    console.log(htmls);
+  }
+
+  // set the input element onchange to call pullfiles
+  document.querySelector("#myfiles").onchange = pullfiles;
+
+//a.t
+</script>
+
+</html>
