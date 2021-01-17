@@ -1,0 +1,89 @@
+/* 2-9.css */
+body {
+  margin: 0;
+  padding: 0;
+  width: 100vw;
+  height: 100vh;
+  box-sizing: border-box;
+  background-color: #b6c9b6;
+}
+
+.dot {
+  height: 25px;
+  width: 25px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.board {
+  border-collapse: collapse;
+}
+
+.board td {
+  border: 5px solid #225a22;
+  box-sizing: border-box;
+}
+
+
+
+.board td.over {
+  background-color: #91ac91;
+}
+
+.board td.begin {
+  background-color: #225a22;
+  opacity: 70%;
+}
+
+.board td.end {
+  background-color: #339433;
+  opacity: 50%;
+}
+
+.flex-container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Media Query */
+@media (orientation: landscape) {
+  .board td {
+    width: 7vw;
+    height: 7vw;
+  }
+}
+
+@media (orientation: portrait) {
+  .board td {
+    width: 7vh;
+    height: 7vh;
+  }
+}
+
+@media(min-width: 400px) {
+  .board td {
+    border: 2px solid #225a22;
+  }
+}
+
+@media(min-width: 700px) {
+  .board td {
+    border: 3px solid #225a22;
+  }
+}
+
+@media(min-width: 1000px) {
+  .board td {
+    border: 4px solid #225a22;
+  }
+}
+
+@media(min-width: 1300px) {
+  .board td {
+    border: 5px solid #225a22;
+  }
+}

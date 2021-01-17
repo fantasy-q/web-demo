@@ -1,26 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
   <style>
-    ul{
+    .ul {
       padding: 2px;
       max-width: 48em;
       background-color: #eee;
     }
-    li{
+
+    .ul li {
       padding: 5px;
     }
-    li:hover{
+
+    .ul li:hover {
       background-color: #fff;
     }
+
+    .ul2 {
+      padding: 2px;
+      max-width: 48em;
+      background-color: #eee;
+    }
+
+    .ul2 a {
+      display: block;
+    }
+    .ul2 span {
+      float: right;
+    }
+
+    .ul2 li {
+      padding: 5px;
+    }
+
+    .ul2 li:hover {
+      background-color: #fff;
+    }
+
   </style>
 </head>
+
 <body>
   <h1>列表链接</h1>
-  <ul>
+  <ul class='ul'>
     <a href="">
       <li>list1</li>
     </a>
@@ -37,5 +63,13 @@
       <li>list5</li>
     </a>
   </ul>
+  <ul class="ul2">
+    <li><a href="">list1<span>s1</span></a></li>
+    <li><a href="">list2<span>s2</span></a></li>
+    <li><a href="">list3<span>s3</span></a></li>
+    <li><a href="">list4<span>s4</span></a></li>
+    <li><a href="">list5<span>s5</span></a></li>
+  </ul>
 </body>
+
 </html>

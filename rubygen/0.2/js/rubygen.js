@@ -4,9 +4,14 @@ window.onload = init;
 function init() {
   const style = document.createElement('style');
   setStyleSheet(style);
+
+  // 合并文本节点
+  // style.normalize();
   document.head.appendChild(style);
-  console.log(style);
+  console.log(style.childNodes);
   console.log(StyleSheet.getWidth());
+
+  
 }
 
 const StyleSheet = {
