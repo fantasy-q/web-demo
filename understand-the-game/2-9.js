@@ -23,7 +23,7 @@ const Board = {
     Path: 0,
 
   },
-  setSize: function (r, c) {
+  setSize(r, c) {
     this.Row = r;
     this.Column = c;
   },
