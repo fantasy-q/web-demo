@@ -1,0 +1,32 @@
+/* Board.css */
+body {
+  margin: 0;
+  padding: 0;
+  width: 100vw;
+  height: 100vh;
+  box-sizing: border-box;
+}
+
+.flex-container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.board {
+  border-collapse: collapse;
+}
+
+.board td {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  border-width: 5px;
+  border-style: solid;
+}
+
+/* .board td.clicked {
+  background-color: #c5c580;
+} */

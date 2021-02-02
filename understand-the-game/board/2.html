@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>2</title>
+</head>
+
+<body>
+  <script src="./load.js"></script>
+  <script>
+    window.onload = () => {
+      const board = new Board(4, 9);
+      const table = generatrTable(board);
+      setStyleSheets(levels[2]);
+      with (document.body) {
+        insertBefore(table, firstElementChild);
+      }
+      board.iterateTd((td) => {
+        td.onclick = () => {
+          td.classList.toggle('clicked');
+        }
+      })
+    }
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,38 @@
+/* MediaQuery.css */
+
+@media (orientation: landscape) {
+  .board td {
+    width: 8vw;
+    height: 8vw;  }
+}
+
+@media (orientation: portrait) {
+  .board td {
+    width: 8vh;
+    height: 8vh;
+  }
+}
+
+@media(min-width: 400px) {
+  .board td {
+    border-width: 2px;
+  }
+}
+
+@media(min-width: 700px) {
+  .board td {
+    border-width: 3px;
+  }
+}
+
+@media(min-width: 1000px) {
+  .board td {
+    border-width: 4px;
+  }
+}
+
+@media(min-width: 1300px) {
+  .board td {
+    border-width: 5px;
+  }
+}
