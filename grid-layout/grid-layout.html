@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <style>
+    .item1 {
+      grid-area: i-1;
+    }
+
+    .item2 {
+      grid-area: i-2;
+    }
+
+    .item3 {
+      grid-area: i-3;
+    }
+
+    .item4 {
+      grid-area: i-4;
+    }
+
+    .item5 {
+      grid-area: i-5;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-areas:
+        'i-1 ... ... ... ... i-2'
+        '... ... ... ... ... ...'
+        'i-4 ... i-5 i-5 i-5 i-5';
+      grid-gap: 0px;
+      background-color: #2196F3;
+      padding: 5px;
+    }
+
+    .grid>div {
+      
+      background-color: rgba(255, 255, 255, 0.8);
+      text-align: center;
+      padding: 20px 0;
+      font-size: 30px;
+    }
+
+  </style>
+
+  <style>
+
+  </style>
+</head>
+
+<body>
+
+  <div class="grid">
+    <div class="item1">i-1</div>
+    <div class="item2">i-2</div>
+    <div class="item4">i-4</div>
+    <div class="item5">i-5</div>
+  </div>
+
+
+
+</body>
+
+</html>

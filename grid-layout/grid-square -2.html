@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    body {
+      padding: 1em;
+    }
+
+    .container {
+      outline: 2px solid #aaa;
+      padding: 2em;
+      display: grid;
+      grid-template-columns: 100px 100px 100px 100px;
+      box-sizing: border-box;
+      grid-gap: 2px;
+      /* background-color: black; */
+    }
+
+    .container div {
+      background-color: #2196F3;
+      box-shadow: 0 0 0 2px black;
+      box-sizing: border-box;
+      border-radius: 10px;
+    }
+
+    .container div::before {
+      content: "";
+      padding-bottom: 100%;
+      display: inline-block;
+      vertical-align: top;
+    }
+
+  </style>
+</head>
+
+<body>
+  <!-- https://stackoverflow.com/a/43686894 -->
+  <div class="container">
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+  </div>
+</body>
+
+</html>
