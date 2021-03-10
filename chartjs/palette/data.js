@@ -51,12 +51,13 @@ var chart = new Chart(ctx, {
       text: 'Palette Array',
       fontSize: 24,
     },
+    // 学到一个 legend 新含义：图表的图例
     legend: {
       display: true,
       align: 'start',
       position: 'top',
       labels: {
-        boxWidth: 60,
+        boxWidth: 80,
         fontSize: 24,
       }
     }
