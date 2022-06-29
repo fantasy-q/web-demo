@@ -1,0 +1,12 @@
+  main {
+    margin-left: 10rem;
+    padding: 1rem;
+  }
+
+  .navbar {
+    width: 10rem;
+    position: fixed;
+    height: 100vh;
+    background-color: var(--bg-primary);
+    transition: width 600ms ease;
+  }

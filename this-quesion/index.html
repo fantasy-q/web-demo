@@ -1,0 +1,19 @@
+<style>
+  strong {
+    color: red;
+  }
+
+</style>
+
+<h1>哪个对象调用函数，函数里面的this指向哪个对象。</h1>
+<h1>this的指向在<strong>函数定义</strong>的时候是确定不了的，只有函数执行的时候才能确定 this 的指向</h1>
+<h1>函数被执行时默认被window调用</h1>
+
+<script>
+  function test(a) {
+    this.b = a
+    console.log(this);
+  }
+  test(3)
+  console.log(b)
+</script>
